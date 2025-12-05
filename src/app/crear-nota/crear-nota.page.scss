@@ -1,0 +1,95 @@
+/* HEADER minimalist */
+ion-header ion-toolbar {
+  --background: #FFFFFF;   /* White background */
+  --color: #333333;        /* Dark gray text */
+  border-bottom: 1px solid #FFB6C1; /* Subtle pink border */
+}
+
+ion-title {
+  font-weight: 700;
+}
+
+/* Botón GUARDAR */
+ion-button {
+  --background: #FFB6C1;
+  --background-activated: #E5A3AB;
+  --color: #333333;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+ion-button[disabled] {
+  opacity: 0.5;
+}
+
+/* Fondo general */
+ion-content {
+  --background: #FFFFFF;
+}
+
+/* Inputs */
+ion-item {
+  --background: #ffffff;
+  border-radius: 12px;
+  margin: 10px;
+  --border-color: #FFB6C1;
+  border: 1px solid #FFB6C1;
+  box-shadow: 0 2px 8px rgba(255, 182, 193, 0.2);
+}
+
+ion-label {
+  color: #333333;
+  font-weight: 600;
+}
+
+ion-textarea,
+ion-input {
+  --color: #333333;
+  --placeholder-color: #999999;
+}
+
+/* Divider de adjuntos */
+ion-item-divider {
+  --background: #FFF5F7;
+  --color: #333333;
+  font-weight: 700;
+  border: 1px solid #FFB6C1;
+}
+
+/* Items clickeables (adjuntos) */
+ion-item[button] {
+  --background: #ffffff;
+  border-bottom: 1px solid #FFB6C1;
+}
+
+ion-item[button]:hover {
+  background: #FFF5F7;
+}
+
+/* ⚠️ FIX: Íconos *visibles* en adjuntos */
+ion-item[button] ion-icon {
+  color: #FFB6C1 !important;
+  font-size: 20px;
+}
+
+/* Flecha al final */
+ion-item[button] ion-icon[slot="end"] {
+  color: #FFB6C1 !important;
+}
+
+/* Imagen adjunta */
+ion-img {
+  border-radius: 14px;
+  border: 1px solid #FFB6C1;
+  box-shadow: 0 2px 8px rgba(255, 182, 193, 0.2);
+}
+
+/* Ubicación */
+p {
+  color: #333333;
+  font-weight: 600;
+  background: #FFF5F7;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #FFB6C1;
+}

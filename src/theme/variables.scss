@@ -1,0 +1,21 @@
+// For information on how to create your own theme, please see:
+// http://ionicframework.com/docs/theming/
+
+// Color scheme
+:root {
+  --ion-color-primary: #FFB6C1; // Soft pink for borders and accents
+  --ion-color-primary-rgb: 255, 182, 193;
+  --ion-color-primary-contrast: #000000; // Black text for contrast
+  --ion-color-primary-contrast-rgb: 0, 0, 0;
+  --ion-color-primary-shade: #E5A3AB;
+  --ion-color-primary-tint: #FFC8CE;
+
+  --ion-background-color: #FFFFFF; // White background
+  --ion-text-color: #333333; // Dark gray for high contrast text
+  --ion-text-color-rgb: 51, 51, 51;
+
+  // Custom variables for UI elements
+  --border-radius: 12px;
+  --box-shadow: 0 2px 8px rgba(255, 182, 193, 0.2);
+  --border-color: #FFB6C1;
+}

@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>{{ nota?.titulo }}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="eliminarNota()" color="danger">
+        <ion-icon name="trash"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{ nota?.titulo }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div *ngIf="nota" class="ion-padding">
+    <h2>{{ nota.titulo }}</h2>
+    <p class="fecha-small">{{ nota.fechaCreacion | date:'medium' }}</p>
+
+    <div class="contenido">
+      <p>{{ nota.contenido }}</p>
+    </div>
+
+    <div *ngIf="nota.foto" class="foto-container ion-margin-top">
+      <ion-img [src]="nota.foto" alt="Foto de la nota"></ion-img>
+    </div>
+
+    <div *ngIf="nota.ubicacion" class="ubicacion-container ion-margin-top">
+      <p class="ubicacion-texto">Ubicación: {{ nota.ubicacion.lat.toFixed(6) }}, {{ nota.ubicacion.lng.toFixed(6) }}</p>
+      <ion-button fill="outline" (click)="abrirEnGoogleMaps()">
+        <ion-icon name="map" slot="start"></ion-icon>
+        Ver en Google Maps
+      </ion-button>
+    </div>
+  </div>
+
+  <div *ngIf="!nota" class="ion-text-center ion-padding">
+    <p>Nota no encontrada</p>
+  </div>
+</ion-content>

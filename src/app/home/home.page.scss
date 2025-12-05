@@ -1,0 +1,47 @@
+.home-page {
+  --background: #FFFFFF; /* Clean white background */
+}
+
+/* Ítems */
+.lista-notas ion-item.item-nota {
+  margin: 8px 12px;
+  border-radius: 12px;
+  --background: #ffffff;
+  box-shadow: 0 2px 8px rgba(255, 182, 193, 0.2);
+  border: 1px solid #FFB6C1;
+  transition: transform .15s ease, box-shadow .2s ease;
+}
+
+.lista-notas ion-item.item-nota:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 182, 193, 0.3);
+}
+
+/* Título */
+ion-label h2 {
+  color: #333333; /* High-contrast dark gray */
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+/* Contenido */
+ion-label p {
+  color: #666666; /* Dark gray for readability */
+  margin: 0;
+}
+
+/* Fecha */
+.fecha {
+  font-size: 12px;
+  color: #333333;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+/* Sin notas */
+.sin-notas {
+  text-align: center;
+  padding: 30px;
+  color: #333333;
+  font-weight: 600;
+}

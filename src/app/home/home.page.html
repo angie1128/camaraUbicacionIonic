@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Notas</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="crearNota()">
+        <ion-icon name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="home-page">
+
+  <ion-header collapse="condense">
+    <ion-toolbar color="primary">
+      <ion-title size="large">Notas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list class="lista-notas">
+    <ion-item 
+      *ngFor="let nota of notas" 
+      (click)="verDetalle(nota)"
+      detail="true"
+      class="item-nota"
+    >
+      <ion-label>
+        <h2>{{ nota.titulo }}</h2>
+        <p>{{ nota.contenido | slice:0:50 }}{{ nota.contenido.length > 50 ? '...' : '' }}</p>
+        <p class="fecha">{{ nota.fechaCreacion | date:'short' }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <div *ngIf="notas.length === 0" class="sin-notas">
+    <p>No hay notas. ¡Crea tu primera nota!</p>
+  </div>
+
+</ion-content>

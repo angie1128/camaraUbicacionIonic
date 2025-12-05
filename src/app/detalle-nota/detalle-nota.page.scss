@@ -1,0 +1,94 @@
+/* HEADER minimalist */
+ion-header ion-toolbar {
+  --background: #FFFFFF;   /* White background */
+  --color: #333333;        /* Dark gray text */
+  border-bottom: 1px solid #FFB6C1; /* Subtle pink border */
+}
+
+ion-title {
+  font-weight: 700;
+}
+
+/* Botón eliminar (subtle pink accent) */
+ion-button[color="danger"] {
+  --background: #FFB6C1;
+  --background-activated: #E5A3AB;
+  --color: #333333;
+  border-radius: 12px;
+}
+
+ion-button[color="danger"] ion-icon {
+  font-size: 20px;
+  color: #333333;
+}
+
+/* Fondo general */
+ion-content {
+  --background: #FFFFFF;
+}
+
+/* Títulos */
+h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 5px;
+}
+
+/* Fecha */
+.fecha-small {
+  font-size: 13px;
+  color: #666666;
+  margin-bottom: 15px;
+}
+
+/* Contenido */
+.contenido p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333333;
+  background: #ffffff;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #FFB6C1;
+  box-shadow: 0 2px 8px rgba(255, 182, 193, 0.2);
+}
+
+/* Foto adjunta */
+.foto-container ion-img {
+  border-radius: 14px;
+  border: 1px solid #FFB6C1;
+  box-shadow: 0 2px 8px rgba(255, 182, 193, 0.2);
+}
+
+/* Ubicación */
+.ubicacion-container {
+  background: #FFF5F7;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #FFB6C1;
+}
+
+.ubicacion-texto {
+  color: #333333;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* Botón de Google Maps */
+ion-button[fill="outline"] {
+  --border-color: #FFB6C1;
+  --color: #333333;
+  --background-hover: rgba(255, 182, 193, 0.1);
+  --border-radius: 12px;
+}
+
+ion-button[fill="outline"] ion-icon {
+  color: #FFB6C1;
+}
+
+/* Fallback (nota no existe) */
+ion-text-center p {
+  color: #333333;
+  font-weight: 600;
+}
